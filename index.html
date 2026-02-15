@@ -1,0 +1,2155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafsa Pharmacy & Mir Mart - Your Trusted Healthcare & Lifestyle Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ========================================
+       RESET & BASE STYLES
+       ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pharmacy-green: #6CBE45;
+            --pharmacy-green-dark: #5AA838;
+            --pharmacy-green-light: #E8F5E0;
+
+            --mart-blue: #3B4BA8;
+            --mart-blue-dark: #2C3A85;
+            --mart-blue-light: #E3E7F5;
+
+            --white: #ffffff;
+            --black: #1a1a1a;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-600: #6b7280;
+            --gray-700: #404040;
+            --gray-900: #171717;
+
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ========================================
+       HEADER NAVIGATION
+       ======================================== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            color: var(--gray-900);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--gray-100);
+            color: var(--black);
+        }
+
+        .nav-link.active {
+            background: var(--pharmacy-green);
+            color: var(--white);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            cursor: pointer;
+            color: var(--black);
+        }
+
+        /* ========================================
+       HERO SECTION - SPLIT DESIGN (HOME PAGE)
+       ======================================== */
+        .hero-wrapper {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - 80px);
+        }
+
+        .hero-half {
+            position: relative;
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .hero-half:hover {
+            box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-pharmacy {
+            background: linear-gradient(135deg, var(--pharmacy-green-light) 0%, #d4f1c5 100%);
+        }
+
+        .hero-pharmacy::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(108, 190, 69, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-mart {
+            background: linear-gradient(135deg, var(--mart-blue-light) 0%, #d1d9f5 100%);
+        }
+
+        .hero-mart::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 75, 168, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 550px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-pharmacy .hero-badge {
+            background: var(--pharmacy-green);
+            color: var(--white);
+        }
+
+        .hero-mart .hero-badge {
+            background: var(--mart-blue);
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-pharmacy .hero-title {
+            color: var(--pharmacy-green-dark);
+        }
+
+        .hero-mart .hero-title {
+            color: var(--mart-blue-dark);
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-pharmacy .hero-button {
+            background: var(--pharmacy-green);
+            color: var(--white);
+        }
+
+        .hero-pharmacy .hero-button:hover {
+            background: var(--pharmacy-green-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(108, 190, 69, 0.3);
+        }
+
+        .hero-mart .hero-button {
+            background: var(--mart-blue);
+            color: var(--white);
+        }
+
+        .hero-mart .hero-button:hover {
+            background: var(--mart-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(59, 75, 168, 0.3);
+        }
+
+        .hero-image {
+            margin-top: 2rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+            height: 360px;
+            background: var(--white);
+            display: block;
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ========================================
+       PAGE SECTIONS
+       ======================================== */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========================================
+       ENHANCED BANNER SLIDER WITH GRADIENT OVERLAY
+       ======================================== */
+        .banner-slider {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Gradient Overlay on One Side */
+        .slide-gradient-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 55%;
+            z-index: 1;
+        }
+
+        .slide-gradient-overlay.left {
+            left: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+        }
+
+        .slide-gradient-overlay.right {
+            right: 0;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+        }
+
+        /* Pharmacy gradient */
+        .pharmacy-slide .slide-gradient-overlay.left {
+            background: linear-gradient(to right, rgba(108, 190, 69, 0.95) 0%, rgba(90, 168, 56, 0.85) 40%, rgba(108, 190, 69, 0.3) 80%, transparent 100%);
+        }
+
+        .pharmacy-slide .slide-gradient-overlay.right {
+            background: linear-gradient(to left, rgba(108, 190, 69, 0.95) 0%, rgba(90, 168, 56, 0.85) 40%, rgba(108, 190, 69, 0.3) 80%, transparent 100%);
+        }
+
+        /* Mart gradient */
+        .mart-slide .slide-gradient-overlay.left {
+            background: linear-gradient(to right, rgba(59, 75, 168, 0.95) 0%, rgba(44, 58, 133, 0.85) 40%, rgba(59, 75, 168, 0.3) 80%, transparent 100%);
+        }
+
+        .mart-slide .slide-gradient-overlay.right {
+            background: linear-gradient(to left, rgba(59, 75, 168, 0.95) 0%, rgba(44, 58, 133, 0.85) 40%, rgba(59, 75, 168, 0.3) 80%, transparent 100%);
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            padding: 3rem;
+            max-width: 650px;
+        }
+
+        .slide-content.align-left {
+            margin-left: 5%;
+        }
+
+        .slide-content.align-right {
+            margin-left: auto;
+            margin-right: 5%;
+            text-align: right;
+        }
+
+        .slide-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .slide-content h2 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .slide-content p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0.95;
+        }
+
+        .slide-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: var(--white);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .pharmacy-slide .slide-button {
+            color: var(--pharmacy-green);
+        }
+
+        .pharmacy-slide .slide-button:hover {
+            background: var(--pharmacy-green);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        .mart-slide .slide-button {
+            color: var(--mart-blue);
+        }
+
+        .mart-slide .slide-button:hover {
+            background: var(--mart-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Slider Navigation */
+        .slider-nav {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .slider-dot.active {
+            background: var(--white);
+            width: 45px;
+            border-radius: 6px;
+            border-color: var(--white);
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            color: var(--gray-900);
+        }
+
+        .slider-arrow:hover {
+            background: var(--white);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-arrow.prev {
+            left: 2.5rem;
+        }
+
+        .slider-arrow.next {
+            right: 2.5rem;
+        }
+
+        /* ========================================
+       PAGE CONTENT
+       ======================================== */
+        .page-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            margin-bottom: 4rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========================================
+       ENHANCED FEATURE SECTION WITH REAL IMAGES
+       ======================================== */
+        .feature-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+            padding: 0;
+        }
+
+        .feature-showcase:nth-child(even) {
+            direction: rtl;
+        }
+
+        .feature-showcase:nth-child(even)>* {
+            direction: ltr;
+        }
+
+        .feature-image-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .feature-image-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .feature-info h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        .feature-info p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--gray-700);
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-list li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            font-size: 1.4rem;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .pharmacy-page .feature-list li::before {
+            color: var(--pharmacy-green);
+            background: var(--pharmacy-green-light);
+        }
+
+        .mart-page .feature-list li::before {
+            color: var(--mart-blue);
+            background: var(--mart-blue-light);
+        }
+
+        .feature-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pharmacy-page .feature-button {
+            background: var(--pharmacy-green);
+            color: var(--white);
+        }
+
+        .pharmacy-page .feature-button:hover {
+            background: var(--pharmacy-green-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(108, 190, 69, 0.4);
+        }
+
+        .mart-page .feature-button {
+            background: var(--mart-blue);
+            color: var(--white);
+        }
+
+        .mart-page .feature-button:hover {
+            background: var(--mart-blue-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(59, 75, 168, 0.4);
+        }
+
+        /* ========================================
+       ENHANCED SERVICES GRID WITH IMAGES
+       ======================================== */
+        .services-section {
+            padding: 5rem 0;
+            background: var(--gray-50);
+            margin: 0 -2rem 5rem -2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .pharmacy-page .service-card:hover {
+            border-color: var(--pharmacy-green);
+        }
+
+        .mart-page .service-card:hover {
+            border-color: var(--mart-blue);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-content h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .service-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+        }
+
+        /* ========================================
+       ENHANCED PRODUCTS SHOWCASE
+       ======================================== */
+        .products-showcase {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+            padding: 5rem 3rem;
+            border-radius: 30px;
+            margin-bottom: 5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.75rem;
+            text-align: center;
+        }
+
+        .product-info h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--black);
+        }
+
+        .product-info p {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ========================================
+       ENHANCED CONTACT SECTION
+       ======================================== */
+        .contact-wrapper {
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            border-radius: 30px;
+            padding: 5rem 4rem;
+            margin-top: 5rem;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            background: var(--white);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .pharmacy-page .contact-icon {
+            background: var(--pharmacy-green);
+            color: var(--white);
+        }
+
+        .mart-page .contact-icon {
+            background: var(--mart-blue);
+            color: var(--white);
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--black);
+        }
+
+        .contact-info p,
+        .contact-info a {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .contact-info a:hover {
+            color: var(--black);
+            text-decoration: underline;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3.5rem;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.4rem 3.5rem;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .cta-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-phone {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .cta-phone:hover {
+            background: var(--gray-900);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ========================================
+       ENHANCED AREAS SECTION
+       ======================================== */
+        .areas-section {
+            padding: 5rem 0;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .area-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid;
+            transition: all 0.3s ease;
+        }
+
+        .area-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .pharmacy-page .area-card {
+            border-left-color: var(--pharmacy-green);
+        }
+
+        .mart-page .area-card {
+            border-left-color: var(--mart-blue);
+        }
+
+        .area-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--black);
+        }
+
+        .area-card ul {
+            list-style: none;
+        }
+
+        .area-card li {
+            padding: 0.9rem 0;
+            padding-left: 2.5rem;
+            color: var(--gray-700);
+            position: relative;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .area-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .pharmacy-page .area-card li::before {
+            color: var(--pharmacy-green);
+        }
+
+        .mart-page .area-card li::before {
+            color: var(--mart-blue);
+        }
+
+        /* ========================================
+       BACK TO HOME BUTTON
+       ======================================== */
+        .back-home-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: var(--pharmacy-green);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            border: none;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .back-home-btn.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-home-btn:hover {
+            transform: scale(1.15);
+            background: var(--pharmacy-green-dark);
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ========================================
+       FOOTER
+       ======================================== */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 0.75rem;
+            opacity: 0.9;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .footer-license {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ========================================
+       RESPONSIVE DESIGN
+       ======================================== */
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-showcase {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .feature-showcase:nth-child(even) {
+                direction: ltr;
+            }
+
+            .slide-content {
+                max-width: 550px;
+            }
+
+            .slide-content h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .logo-img {
+                height: 50px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .banner-slider {
+                height: 450px;
+            }
+
+            .slide-gradient-overlay {
+                width: 100%;
+            }
+
+            .slide-content {
+                padding: 2rem;
+                max-width: 100%;
+            }
+
+            .slide-content.align-left,
+            .slide-content.align-right {
+                margin-left: 0;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .slide-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .slide-content p {
+                font-size: 1.1rem;
+            }
+
+            .slider-arrow {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+
+            .slider-arrow.prev {
+                left: 1rem;
+            }
+
+            .slider-arrow.next {
+                right: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .feature-image-container {
+                height: 350px;
+            }
+
+            .services-grid,
+            .products-grid,
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                padding: 3rem 2rem;
+            }
+
+            .page-content {
+                padding: 3rem 1.5rem;
+            }
+
+            .services-section {
+                margin: 0 -1.5rem 3rem -1.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .banner-slider {
+                height: 400px;
+            }
+
+            .slide-content h2 {
+                font-size: 2rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .feature-info h3 {
+                font-size: 2rem;
+            }
+
+            .hero-image {
+                height: 180px;
+            }
+
+            .feature-image-container {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Hafsa Pharmacy & Mir Mart" class="logo-img">
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="pharmacy">Pharmacy</a></li>
+                <li><a href="#" class="nav-link" data-page="mart">Mart</a></li>
+                <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="homePage" class="page-section active">
+        <div class="hero-wrapper">
+            <div class="hero-half hero-pharmacy" data-navigate="pharmacy">
+                <div class="hero-content">
+                    <span class="hero-badge">Healthcare Services</span>
+                    <h1 class="hero-title">Hafsa Pharmacy</h1>
+                    <p class="hero-text">
+                        Your trusted healthcare partner providing quality medicines, professional consultations, and
+                        comprehensive pharmaceutical services across Islamabad.
+                    </p>
+                    <a href="#" class="hero-button" data-page="pharmacy">
+                        Explore Services →
+                    </a>
+                    <div class="hero-image">
+                        <img src="https://img.freepik.com/premium-photo/pharmacist-filling-prescription-pharmacy-drugstore_67340-187.jpg"
+                            alt="Pharmacy shelves" class="hero-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-half hero-mart" data-navigate="mart">
+                <div class="hero-content">
+                    <span class="hero-badge">Daily Essentials</span>
+                    <h1 class="hero-title">Mir Mart</h1>
+                    <p class="hero-text">
+                        Your neighborhood convenience store offering fresh groceries, daily essentials, household items,
+                        and more with fast home delivery service.
+                    </p>
+                    <a href="#" class="hero-button" data-page="mart">
+                        Browse Products →
+                    </a>
+                    <div class="hero-image">
+                        <img src="https://img.freepik.com/premium-photo/shopping-cart-filled-with-groceries-supermarket-aisle-surrounded-by-colorful-packaging-shelves-stocked-with-food-products-household-items_1401286-3450.jpg"
+                            alt="Grocery shopping basket" class="hero-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHARMACY PAGE -->
+    <div id="pharmacyPage" class="page-section pharmacy-page">
+
+        <!-- Enhanced Banner Slider with Gradient Overlay -->
+        <div class="banner-slider">
+            <div class="slider-container" id="pharmacySlider">
+                <!-- Slide 1 -->
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200');">
+                    <div class="slide-gradient-overlay left"></div>
+                    <div class="slide-content align-left">
+                        <span class="slide-badge">Trusted Healthcare</span>
+                        <h2>Quality Medicines<br>You Can Trust</h2>
+                        <p>Licensed pharmaceutical care with professional guidance available 24/7 for your health needs
+                        </p>
+                        <a href="tel:+923001234567" class="slide-button">Call Now 📞</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200');">
+                    <div class="slide-gradient-overlay right"></div>
+                    <div class="slide-content align-right">
+                        <span class="slide-badge">Fast Delivery</span>
+                        <h2>Home Delivery<br>Service</h2>
+                        <p>Order your medicines via WhatsApp and get same-day delivery across Islamabad</p>
+                        <a href="https://wa.me/923001234567" class="slide-button">Order on WhatsApp 💬</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=1200');">
+                    <div class="slide-gradient-overlay left"></div>
+                    <div class="slide-content align-left">
+                        <span class="slide-badge">Expert Care</span>
+                        <h2>Professional Health<br>Consultation</h2>
+                        <p>Free consultation from registered pharmacists for all your health queries and concerns</p>
+                        <a href="#" class="slide-button" data-scroll="contact">Contact Us 📧</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev" onclick="moveSlide('pharmacy', -1)">‹</button>
+            <button class="slider-arrow next" onclick="moveSlide('pharmacy', 1)">›</button>
+
+            <div class="slider-nav" id="pharmacyDots">
+                <span class="slider-dot active" onclick="currentSlide('pharmacy', 0)"></span>
+                <span class="slider-dot" onclick="currentSlide('pharmacy', 1)"></span>
+                <span class="slider-dot" onclick="currentSlide('pharmacy', 2)"></span>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <!-- Feature Showcase 1 -->
+            <div class="feature-showcase">
+                <div class="feature-image-container">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800" alt="Medicine Range">
+                    <div class="feature-overlay">Complete Medicine Range</div>
+                </div>
+                <div class="feature-info">
+                    <h3>Wide Range of Medicines</h3>
+                    <p>We stock a comprehensive selection of prescription and over-the-counter medications from all
+                        major pharmaceutical brands, ensuring you get exactly what you need.</p>
+                    <ul class="feature-list">
+                        <li>Branded & Generic Medicines</li>
+                        <li>Verified by Licensed Pharmacists</li>
+                        <li>Fresh Stock with Proper Storage</li>
+                        <li>Competitive Pricing</li>
+                    </ul>
+                    <a href="tel:+923001234567" class="feature-button">Order Now →</a>
+                </div>
+            </div>
+
+            <!-- Feature Showcase 2 -->
+            <div class="feature-showcase">
+                <div class="feature-image-container">
+                    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800"
+                        alt="Pharmacist Consultation">
+                    <div class="feature-overlay">Expert Pharmacist Consultation</div>
+                </div>
+                <div class="feature-info">
+                    <h3>Professional Healthcare Services</h3>
+                    <p>Our registered pharmacists are always available to provide expert guidance on medications, health
+                        conditions, and wellness advice.</p>
+                    <ul class="feature-list">
+                        <li>Free Health Consultation</li>
+                        <li>Medication Review & Advice</li>
+                        <li>Blood Pressure Monitoring</li>
+                        <li>Blood Sugar Testing</li>
+                    </ul>
+                    <a href="https://wa.me/923001234567" class="feature-button">WhatsApp Us →</a>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <section class="services-section">
+                <h2 class="section-title">Our Complete Services</h2>
+                <p class="section-subtitle">Comprehensive pharmaceutical care tailored to your health needs</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=600"
+                                alt="Home Delivery">
+                        </div>
+                        <div class="service-content">
+                            <h3>Home Delivery</h3>
+                            <p>Fast and reliable medicine delivery across all areas of Islamabad with careful packaging.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600"
+                                alt="Lab Tests">
+                        </div>
+                        <div class="service-content">
+                            <h3>Lab Tests</h3>
+                            <p>Convenient sample collection for various laboratory tests with accurate results.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600"
+                                alt="Vaccinations">
+                        </div>
+                        <div class="service-content">
+                            <h3>Vaccinations</h3>
+                            <p>Complete immunization services including COVID-19, flu, and other essential vaccines.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Showcase -->
+            <div class="products-showcase">
+                <h2 class="section-title">Product Categories</h2>
+                <p class="section-subtitle">Everything you need for your health and wellness</p>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400"
+                                alt="Prescription Medicines">
+                        </div>
+                        <div class="product-info">
+                            <h4>Prescription Medicines</h4>
+                            <p>All major brands and generic options</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://img.freepik.com/free-photo/top-view-medical-pills_23-2149283859.jpg?uid=R49441938&ga=GA1.1.1791443031.1690348607&semt=ais_wordcount_boost&w=740&q=80"
+                                alt="OTC Products">
+                        </div>
+                        <div class="product-info">
+                            <h4>OTC Products</h4>
+                            <p>Pain relief, vitamins, supplements</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400"
+                                alt="Baby Care">
+                        </div>
+                        <div class="product-info">
+                            <h4>Baby Care</h4>
+                            <p>Formula, diapers, baby medications</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400"
+                                alt="Personal Care">
+                        </div>
+                        <div class="product-info">
+                            <h4>Personal Care</h4>
+                            <p>Skincare and hygiene products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Areas Section -->
+            <section class="areas-section">
+                <h2 class="section-title">Areas We Serve</h2>
+                <p class="section-subtitle">Fast delivery across all major areas of Islamabad</p>
+
+                <div class="areas-grid">
+                    <div class="area-card">
+                        <h3>Central Islamabad</h3>
+                        <ul>
+                            <li>Blue Area & Diplomatic Enclave</li>
+                            <li>F-6, F-7, F-8 Sectors</li>
+                            <li>F-9, F-10, F-11 Sectors</li>
+                            <li>G-6 to G-11 Sectors</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Premium Housing</h3>
+                        <ul>
+                            <li>DHA Islamabad (All Phases)</li>
+                            <li>Bahria Town Islamabad</li>
+                            <li>Gulberg Islamabad</li>
+                            <li>Naval Anchorage</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Residential Areas</h3>
+                        <ul>
+                            <li>H-8 to H-13 Sectors</li>
+                            <li>I-8, I-9, I-10 Sectors</li>
+                            <li>Soan Garden</li>
+                            <li>Rawal Town</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Extended Coverage</h3>
+                        <ul>
+                            <li>E-11 Sector</li>
+                            <li>Bani Gala</li>
+                            <li>Kurri Road</li>
+                            <li>Taramri & Lehtrar Road</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <div class="contact-wrapper">
+                <h2 class="section-title">Contact Hafsa Pharmacy</h2>
+                <p class="section-subtitle">We're here to help with all your healthcare needs</p>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-info">
+                            <h3>Location</h3>
+                            <p>123 Main Boulevard, DHA Phase 5, Islamabad, Punjab 44000</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-info">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+923001234567">+92 300 1234567</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-info">
+                            <h3>Hours</h3>
+                            <p>Open Daily: 8:00 AM – 10:00 PM<br>(Including Holidays)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@hafsapharmacy.pk">info@hafsapharmacy.pk</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://wa.me/923001234567" class="cta-btn cta-whatsapp">Order on WhatsApp</a>
+                    <a href="tel:+923001234567" class="cta-btn cta-phone">Call Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MART PAGE -->
+    <div id="martPage" class="page-section mart-page">
+
+        <!-- Enhanced Banner Slider with Gradient Overlay -->
+        <div class="banner-slider">
+            <div class="slider-container" id="martSlider">
+                <!-- Slide 1 -->
+                <div class="slide mart-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200');">
+                    <div class="slide-gradient-overlay left"></div>
+                    <div class="slide-content align-left">
+                        <span class="slide-badge">Fresh & Quality</span>
+                        <h2>Fresh Groceries<br>Daily</h2>
+                        <p>Quality products at the best prices with same-day delivery across Islamabad</p>
+                        <a href="https://wa.me/923001234567" class="slide-button">Order Now 🛒</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide mart-slide"
+                    style="background-image: url('https://img.freepik.com/premium-photo/store-with-sign-that-says-super-super-it_1022212-19920.jpg?uid=R49441938&ga=GA1.1.1791443031.1690348607&semt=ais_hybrid&w=740&q=80');">
+                    <div class="slide-gradient-overlay right"></div>
+                    <div class="slide-content align-right">
+                        <span class="slide-badge">Quick Service</span>
+                        <h2>Same-Day<br>Home Delivery</h2>
+                        <p>Order by 2 PM and receive your groceries at your doorstep the same day</p>
+                        <a href="tel:+923001234567" class="slide-button">Call to Order 📞</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide mart-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=1200');">
+                    <div class="slide-gradient-overlay left"></div>
+                    <div class="slide-content align-left">
+                        <span class="slide-badge">Best Value</span>
+                        <h2>Best Prices<br>Guaranteed</h2>
+                        <p>Competitive pricing on all products with special deals and discounts every week</p>
+                        <a href="#" class="slide-button" data-scroll="contact">View Products 🏷️</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev" onclick="moveSlide('mart', -1)">‹</button>
+            <button class="slider-arrow next" onclick="moveSlide('mart', 1)">›</button>
+
+            <div class="slider-nav" id="martDots">
+                <span class="slider-dot active" onclick="currentSlide('mart', 0)"></span>
+                <span class="slider-dot" onclick="currentSlide('mart', 1)"></span>
+                <span class="slider-dot" onclick="currentSlide('mart', 2)"></span>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <!-- Feature Showcase 1 -->
+            <div class="feature-showcase">
+                <div class="feature-image-container">
+                    <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=800"
+                        alt="Fresh Groceries">
+                    <div class="feature-overlay">Fresh Groceries Daily</div>
+                </div>
+                <div class="feature-info">
+                    <h3>Fresh Groceries & Essentials</h3>
+                    <p>We provide fresh, quality groceries and daily essentials delivered straight to your door. All
+                        products are sourced from trusted suppliers.</p>
+                    <ul class="feature-list">
+                        <li>Fresh Vegetables & Fruits</li>
+                        <li>Rice, Flour & Staple Foods</li>
+                        <li>Dairy Products & Beverages</li>
+                        <li>Quality Assured Products</li>
+                    </ul>
+                    <a href="https://wa.me/923001234567" class="feature-button">Order Now →</a>
+                </div>
+            </div>
+
+            <!-- Feature Showcase 2 -->
+            <div class="feature-showcase">
+                <div class="feature-image-container">
+                    <img src="https://images.unsplash.com/photo-1628102491629-778571d893a3?w=800"
+                        alt="Household Products">
+                    <div class="feature-overlay">Complete Household Range</div>
+                </div>
+                <div class="feature-info">
+                    <h3>Complete Household Solutions</h3>
+                    <p>From cleaning products to personal care items, we have everything you need for your home under
+                        one roof.</p>
+                    <ul class="feature-list">
+                        <li>Cleaning & Laundry Products</li>
+                        <li>Personal Care & Hygiene</li>
+                        <li>Baby Care Essentials</li>
+                        <li>Kitchen & Household Items</li>
+                    </ul>
+                    <a href="tel:+923001234567" class="feature-button">Call to Order →</a>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <section class="services-section">
+                <h2 class="section-title">Why Shop With Us</h2>
+                <p class="section-subtitle">Convenience, quality, and reliability in every order</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600"
+                                alt="Delivery Van">
+                        </div>
+                        <div class="service-content">
+                            <h3>Same-Day Delivery</h3>
+                            <p>Order by 2 PM and receive your groceries the same day across Islamabad.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600"
+                                alt="Best Prices">
+                        </div>
+                        <div class="service-content">
+                            <h3>Best Prices</h3>
+                            <p>Competitive pricing on all products with regular deals and discounts.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"
+                                alt="Quality Check">
+                        </div>
+                        <div class="service-content">
+                            <h3>Quality Assured</h3>
+                            <p>All products sourced from authorized distributors with quality checks.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Showcase -->
+            <div class="products-showcase">
+                <h2 class="section-title">Product Categories</h2>
+                <p class="section-subtitle">Everything you need for your daily life</p>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400"
+                                alt="Groceries">
+                        </div>
+                        <div class="product-info">
+                            <h4>Groceries & Staples</h4>
+                            <p>Rice, flour, sugar, oil, pulses</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400"
+                                alt="Beverages">
+                        </div>
+                        <div class="product-info">
+                            <h4>Beverages</h4>
+                            <p>Juices, soft drinks, tea, coffee</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400" alt="Snacks">
+                        </div>
+                        <div class="product-info">
+                            <h4>Snacks</h4>
+                            <p>Biscuits, chips, chocolates</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400"
+                                alt="Personal Care">
+                        </div>
+                        <div class="product-info">
+                            <h4>Personal Care</h4>
+                            <p>Soap, shampoo, hygiene items</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400"
+                                alt="Cleaning">
+                        </div>
+                        <div class="product-info">
+                            <h4>Cleaning</h4>
+                            <p>Detergents, disinfectants</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://img.freepik.com/premium-photo/photo-baby-care-essentials_1320456-22301.jpg?uid=R49441938&ga=GA1.1.1791443031.1690348607&semt=ais_wordcount_boost&w=740&q=80"
+                                alt="Baby Essentials">
+                        </div>
+                        <div class="product-info">
+                            <h4>Baby Essentials</h4>
+                            <p>Formula, diapers, baby food</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Areas Section -->
+            <section class="areas-section">
+                <h2 class="section-title">Delivery Areas</h2>
+                <p class="section-subtitle">Fast grocery delivery across Islamabad</p>
+
+                <div class="areas-grid">
+                    <div class="area-card">
+                        <h3>Central Islamabad</h3>
+                        <ul>
+                            <li>F-6, F-7, F-8 Sectors</li>
+                            <li>F-9, F-10, F-11 Sectors</li>
+                            <li>Blue Area</li>
+                            <li>G-6 to G-11 Sectors</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Modern Housing</h3>
+                        <ul>
+                            <li>DHA Islamabad</li>
+                            <li>Bahria Town Islamabad</li>
+                            <li>Park View City</li>
+                            <li>Gulberg Islamabad</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Residential Sectors</h3>
+                        <ul>
+                            <li>H-8 to H-13 Sectors</li>
+                            <li>I-8, I-9, I-10 Sectors</li>
+                            <li>Naval Anchorage</li>
+                            <li>Chak Shahzad</li>
+                        </ul>
+                    </div>
+
+                    <div class="area-card">
+                        <h3>Outskirts</h3>
+                        <ul>
+                            <li>Bani Gala</li>
+                            <li>Faizabad</li>
+                            <li>Kurri Road</li>
+                            <li>Taramri & Lehtrar Road</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <div class="contact-wrapper">
+                <h2 class="section-title">Contact Mir Mart</h2>
+                <p class="section-subtitle">Place your grocery orders easily</p>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-info">
+                            <h3>Location</h3>
+                            <p>123 Main Boulevard, DHA Phase 5, Islamabad, Punjab 44000</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-info">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+923001234567">+92 300 1234567</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-info">
+                            <h3>Hours</h3>
+                            <p>Open Daily: 8:00 AM – 10:00 PM<br>Orders until 8 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p><a href="mailto:orders@mirmart.pk">orders@mirmart.pk</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://wa.me/923001234567" class="cta-btn cta-whatsapp">Order on WhatsApp</a>
+                    <a href="tel:+923001234567" class="cta-btn cta-phone">Call to Order</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contactPage" class="page-section">
+        <div class="banner-slider"
+            style="height: 350px; background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);">
+            <div
+                style="height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+                <div>
+                    <h1
+                        style="font-family: var(--font-display); font-size: 3.5rem; color: var(--black); margin-bottom: 1rem;">
+                        Get In Touch</h1>
+                    <p style="font-size: 1.3rem; color: var(--gray-600); max-width: 700px;">We're here to help with all
+                        your pharmaceutical and grocery needs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="services-grid" style="margin-bottom: 4rem;">
+                <div class="service-card" style="border-top: 4px solid var(--pharmacy-green);">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600"
+                            alt="Pharmacy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hafsa Pharmacy</h3>
+                        <p style="margin-bottom: 1.5rem;">Medicine orders, prescriptions, and health consultations</p>
+                        <div style="text-align: left; font-size: 0.95rem; color: var(--gray-700);">
+                            <p><strong>Phone:</strong> <a href="tel:+923001234567"
+                                    style="color: var(--pharmacy-green);">+92 300 1234567</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:info@hafsapharmacy.pk"
+                                    style="color: var(--pharmacy-green);">info@hafsapharmacy.pk</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" style="border-top: 4px solid var(--mart-blue);">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600" alt="Mart">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mir Mart</h3>
+                        <p style="margin-bottom: 1.5rem;">Grocery orders, household items, and daily essentials</p>
+                        <div style="text-align: left; font-size: 0.95rem; color: var(--gray-700);">
+                            <p><strong>Phone:</strong> <a href="tel:+923001234567" style="color: var(--mart-blue);">+92
+                                    300 1234567</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:orders@mirmart.pk"
+                                    style="color: var(--mart-blue);">orders@mirmart.pk</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-wrapper" style="border: 2px solid var(--gray-200);">
+                <h2 class="section-title">Visit Our Store</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: var(--gray-200); color: var(--black);">📍</div>
+                        <div class="contact-info">
+                            <h3>Address</h3>
+                            <p>123 Main Boulevard, DHA Phase 5, Islamabad, Punjab 44000, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: var(--gray-200); color: var(--black);">🕒</div>
+                        <div class="contact-info">
+                            <h3>Operating Hours</h3>
+                            <p>Open Daily: 8:00 AM – 10:00 PM<br>(Including Public Holidays)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: var(--gray-200); color: var(--black);">🚗</div>
+                        <div class="contact-info">
+                            <h3>Facilities</h3>
+                            <p>Free parking • Wheelchair accessible • Easy boulevard access</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: var(--gray-200); color: var(--black);">💳</div>
+                        <div class="contact-info">
+                            <h3>Payment</h3>
+                            <p>Cash • Cards • Bank Transfer • JazzCash • Easypaisa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO HOME -->
+    <button class="back-home-btn" id="backHomeBtn">🏠</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>Hafsa Pharmacy & Mir Mart</strong></p>
+            <p>Your Trusted Partner Since 2010</p>
+            <p>Two businesses, one building, complete convenience for your health and lifestyle needs.</p>
+            <div class="footer-license">
+                <p>Hafsa Pharmacy is licensed and regulated by the Drug Regulatory Authority of Pakistan (DRAP)</p>
+                <p>A registered pharmacist is always on duty during all operating hours</p>
+                <p>&copy; 2026 Hafsa Pharmacy & Mir Mart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Page Navigation
+        const pages = {
+            home: document.getElementById('homePage'),
+            pharmacy: document.getElementById('pharmacyPage'),
+            mart: document.getElementById('martPage'),
+            contact: document.getElementById('contactPage')
+        };
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const heroHalves = document.querySelectorAll('.hero-half');
+        const heroButtons = document.querySelectorAll('.hero-button');
+        const backHomeBtn = document.getElementById('backHomeBtn');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        function navigateTo(pageName) {
+            Object.values(pages).forEach(page => page.classList.remove('active'));
+
+            if (pages[pageName]) {
+                pages[pageName].classList.add('active');
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === pageName) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (pageName === 'home') {
+                backHomeBtn.classList.remove('visible');
+            } else {
+                backHomeBtn.classList.add('visible');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            navMenu.classList.remove('active');
+            mobileToggle.textContent = '☰';
+
+            // Reset sliders when navigating
+            if (pageName === 'pharmacy') {
+                currentSlide('pharmacy', 0);
+            } else if (pageName === 'mart') {
+                currentSlide('mart', 0);
+            }
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo(link.dataset.page);
+            });
+        });
+
+        heroHalves.forEach(section => {
+            section.addEventListener('click', (e) => {
+                if (e.target.closest('.hero-button')) return;
+                const page = section.dataset.navigate;
+                if (page) navigateTo(page);
+            });
+        });
+
+        heroButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const page = btn.dataset.page;
+                if (page) navigateTo(page);
+            });
+        });
+
+        backHomeBtn.addEventListener('click', () => navigateTo('home'));
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileToggle.textContent = '☰';
+            }
+        });
+
+        // Slider Functionality
+        let slideIndexes = { pharmacy: 0, mart: 0 };
+
+        function moveSlide(section, direction) {
+            slideIndexes[section] += direction;
+            const slides = document.querySelectorAll(`#${section}Slider .slide`);
+
+            if (slideIndexes[section] >= slides.length) {
+                slideIndexes[section] = 0;
+            }
+            if (slideIndexes[section] < 0) {
+                slideIndexes[section] = slides.length - 1;
+            }
+
+            showSlide(section, slideIndexes[section]);
+        }
+
+        function currentSlide(section, index) {
+            slideIndexes[section] = index;
+            showSlide(section, index);
+        }
+
+        function showSlide(section, index) {
+            const slider = document.getElementById(`${section}Slider`);
+            const dots = document.querySelectorAll(`#${section}Dots .slider-dot`);
+
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Auto-advance slides
+        setInterval(() => {
+            if (pages.pharmacy.classList.contains('active')) {
+                moveSlide('pharmacy', 1);
+            }
+            if (pages.mart.classList.contains('active')) {
+                moveSlide('mart', 1);
+            }
+        }, 6000);
+
+        // Initialize
+        navigateTo('home');
+    </script>
+
+</body>
+
+</html>
