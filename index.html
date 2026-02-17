@@ -177,8 +177,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ========================================
@@ -190,6 +197,7 @@
             grid-template-columns: 1fr 1fr;
             min-height: calc(100vh - 75px);
         }
+
         .hero-half {
             position: relative;
             padding: 4rem 3rem;
@@ -200,12 +208,15 @@
             cursor: pointer;
             transition: all 0.4s ease;
         }
+
         .hero-pharmacy {
             background: linear-gradient(135deg, var(--pharmacy-green-light) 0%, #d4f1c5 100%);
         }
+
         .hero-mart {
             background: linear-gradient(135deg, var(--mart-blue-light) 0%, #d1d9f5 100%);
         }
+
         .hero-content {
             position: relative;
             z-index: 2;
@@ -213,6 +224,7 @@
             margin: 0 auto;
             text-align: center;
         }
+
         .hero-badge {
             display: inline-block;
             padding: 0.5rem 1.25rem;
@@ -221,8 +233,17 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-        .hero-pharmacy .hero-badge { background: var(--pharmacy-green); color: white; }
-        .hero-mart .hero-badge { background: var(--mart-blue); color: white; }
+
+        .hero-pharmacy .hero-badge {
+            background: var(--pharmacy-green);
+            color: white;
+        }
+
+        .hero-mart .hero-badge {
+            background: var(--mart-blue);
+            color: white;
+        }
+
         .hero-title {
             font-family: var(--font-display);
             font-size: 3.5rem;
@@ -230,13 +251,21 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
         }
-        .hero-pharmacy .hero-title { color: var(--pharmacy-green-dark); }
-        .hero-mart .hero-title { color: var(--mart-blue-dark); }
+
+        .hero-pharmacy .hero-title {
+            color: var(--pharmacy-green-dark);
+        }
+
+        .hero-mart .hero-title {
+            color: var(--mart-blue-dark);
+        }
+
         .hero-text {
             font-size: 1.1rem;
             color: var(--gray-700);
             margin-bottom: 2.5rem;
         }
+
         .hero-button {
             display: inline-flex;
             align-items: center;
@@ -246,18 +275,32 @@
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
-        .hero-pharmacy .hero-button { background: var(--pharmacy-green); color: white; }
-        .hero-mart .hero-button { background: var(--mart-blue); color: white; }
+
+        .hero-pharmacy .hero-button {
+            background: var(--pharmacy-green);
+            color: white;
+        }
+
+        .hero-mart .hero-button {
+            background: var(--mart-blue);
+            color: white;
+        }
+
         .hero-image {
             margin-top: 2rem;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
             height: 360px;
         }
-        .hero-img { width:100%; height:100%; object-fit: cover; }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         /* ========================================
            BANNER SLIDER (aligned like mart page)
@@ -269,11 +312,13 @@
             overflow: hidden;
             margin-top: 75px;
         }
+
         .slider-container {
             display: flex;
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             height: 100%;
         }
+
         .slide {
             min-width: 100%;
             height: 100%;
@@ -283,6 +328,7 @@
             background-size: cover;
             background-position: center;
         }
+
         .slide-gradient-overlay {
             position: absolute;
             top: 0;
@@ -290,26 +336,33 @@
             width: 55%;
             z-index: 1;
         }
+
         .slide-gradient-overlay.left {
             left: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
         }
+
         .slide-gradient-overlay.right {
             right: 0;
-            background: linear-gradient(to left, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
         }
+
         .pharmacy-slide .slide-gradient-overlay.left {
-            background: linear-gradient(to right, rgba(108,190,69,0.95) 0%, rgba(90,168,56,0.85) 40%, rgba(108,190,69,0.3) 80%, transparent 100%);
+            background: linear-gradient(to right, rgba(108, 190, 69, 0.95) 0%, rgba(90, 168, 56, 0.85) 40%, rgba(108, 190, 69, 0.3) 80%, transparent 100%);
         }
+
         .pharmacy-slide .slide-gradient-overlay.right {
-            background: linear-gradient(to left, rgba(108,190,69,0.95) 0%, rgba(90,168,56,0.85) 40%, rgba(108,190,69,0.3) 80%, transparent 100%);
+            background: linear-gradient(to left, rgba(108, 190, 69, 0.95) 0%, rgba(90, 168, 56, 0.85) 40%, rgba(108, 190, 69, 0.3) 80%, transparent 100%);
         }
+
         .mart-slide .slide-gradient-overlay.left {
-            background: linear-gradient(to right, rgba(59,75,168,0.95) 0%, rgba(44,58,133,0.85) 40%, rgba(59,75,168,0.3) 80%, transparent 100%);
+            background: linear-gradient(to right, rgba(59, 75, 168, 0.95) 0%, rgba(44, 58, 133, 0.85) 40%, rgba(59, 75, 168, 0.3) 80%, transparent 100%);
         }
+
         .mart-slide .slide-gradient-overlay.right {
-            background: linear-gradient(to left, rgba(59,75,168,0.95) 0%, rgba(44,58,133,0.85) 40%, rgba(59,75,168,0.3) 80%, transparent 100%);
+            background: linear-gradient(to left, rgba(59, 75, 168, 0.95) 0%, rgba(44, 58, 133, 0.85) 40%, rgba(59, 75, 168, 0.3) 80%, transparent 100%);
         }
+
         .slide-content {
             position: relative;
             z-index: 2;
@@ -317,32 +370,44 @@
             padding: 3rem;
             max-width: 650px;
         }
-        .slide-content.align-left { margin-left: 5%; }
-        .slide-content.align-right { margin-left: auto; margin-right: 5%; text-align: right; }
+
+        .slide-content.align-left {
+            margin-left: 5%;
+        }
+
+        .slide-content.align-right {
+            margin-left: auto;
+            margin-right: 5%;
+            text-align: right;
+        }
+
         .slide-badge {
             display: inline-block;
             padding: 0.5rem 1.25rem;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             border-radius: 50px;
             font-size: 0.85rem;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
+
         .slide-content h2 {
             font-family: var(--font-display);
             font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             line-height: 1.2;
         }
+
         .slide-content p {
             font-size: 1.3rem;
             line-height: 1.8;
             margin-bottom: 2.5rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
+
         .slide-button {
             display: inline-flex;
             align-items: center;
@@ -354,17 +419,26 @@
             text-decoration: none;
             transition: all 0.3s ease;
             background: white;
-            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
         }
-        .pharmacy-slide .slide-button { color: var(--pharmacy-green); }
-        .mart-slide .slide-button { color: var(--mart-blue); }
+
+        .pharmacy-slide .slide-button {
+            color: var(--pharmacy-green);
+        }
+
+        .mart-slide .slide-button {
+            color: var(--mart-blue);
+        }
+
         .call-now-red {
             background: #ff0000 !important;
             color: white !important;
         }
+
         .call-now-red:hover {
             background: #cc0000 !important;
         }
+
         .slider-nav {
             position: absolute;
             bottom: 2.5rem;
@@ -374,26 +448,29 @@
             display: flex;
             gap: 0.75rem;
         }
+
         .slider-dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255, 255, 255, 0.4);
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid rgba(255,255,255,0.6);
+            border: 2px solid rgba(255, 255, 255, 0.6);
         }
+
         .slider-dot.active {
             background: white;
             width: 45px;
             border-radius: 6px;
         }
+
         .slider-arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             z-index: 3;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             border: none;
             width: 55px;
             height: 55px;
@@ -403,10 +480,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-        .slider-arrow.prev { left: 2.5rem; }
-        .slider-arrow.next { right: 2.5rem; }
+
+        .slider-arrow.prev {
+            left: 2.5rem;
+        }
+
+        .slider-arrow.next {
+            right: 2.5rem;
+        }
 
         /* ========================================
            PAGE CONTENT + BRAND COLOR HEADINGS
@@ -442,6 +525,7 @@
             text-align: center;
             margin-bottom: 1rem;
         }
+
         .section-subtitle {
             text-align: center;
             font-size: 1.2rem;
@@ -456,47 +540,65 @@
             align-items: center;
             margin-bottom: 5rem;
         }
-        .feature-showcase:nth-child(even) { direction: rtl; }
-        .feature-showcase:nth-child(even)>* { direction: ltr; }
+
+        .feature-showcase:nth-child(even) {
+            direction: rtl;
+        }
+
+        .feature-showcase:nth-child(even)>* {
+            direction: ltr;
+        }
+
         .feature-image-container {
             width: 100%;
             height: 450px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 60px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.15);
             position: relative;
         }
-        .feature-image-container img { width:100%; height:100%; object-fit: cover; }
+
+        .feature-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .feature-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             padding: 2rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
             color: white;
             font-size: 1.1rem;
         }
+
         .feature-info h3 {
             font-family: var(--font-display);
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
         }
+
         .feature-info p {
             font-size: 1.15rem;
             color: var(--gray-700);
             margin-bottom: 2rem;
         }
+
         .feature-list {
             list-style: none;
             margin-bottom: 2.5rem;
         }
+
         .feature-list li {
             padding: 1rem 0 1rem 2.5rem;
             position: relative;
             border-bottom: 1px solid var(--gray-200);
         }
+
         .feature-list li::before {
             content: '✓';
             position: absolute;
@@ -510,14 +612,17 @@
             justify-content: center;
             border-radius: 50%;
         }
+
         .pharmacy-page .feature-list li::before {
             color: var(--pharmacy-green);
             background: var(--pharmacy-green-light);
         }
+
         .mart-page .feature-list li::before {
             color: var(--mart-blue);
             background: var(--mart-blue-light);
         }
+
         .feature-button {
             display: inline-flex;
             align-items: center;
@@ -527,10 +632,18 @@
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-        .pharmacy-page .feature-button { background: var(--pharmacy-green); color: white; }
-        .mart-page .feature-button { background: var(--mart-blue); color: white; }
+
+        .pharmacy-page .feature-button {
+            background: var(--pharmacy-green);
+            color: white;
+        }
+
+        .mart-page .feature-button {
+            background: var(--mart-blue);
+            color: white;
+        }
 
         .services-section {
             padding: 5rem 0;
@@ -539,83 +652,153 @@
             padding-left: 2rem;
             padding-right: 2rem;
         }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
         }
+
         .service-card {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
             transition: 0.4s;
         }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-image {
-            width:100%;
-            height:200px;
-            overflow:hidden;
+
+        .service-card:hover {
+            transform: translateY(-10px);
         }
-        .service-image img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
-        .service-card:hover .service-image img { transform:scale(1.1); }
-        .service-content { padding:2rem; text-align:center; }
-        .service-content h3 { font-size:1.6rem; margin-bottom:1rem; }
-        .service-content p { color:var(--gray-600); }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            color: var(--gray-600);
+        }
 
         .products-showcase {
             background: linear-gradient(135deg, var(--gray-50), white);
-            padding:5rem 3rem;
-            border-radius:30px;
-            margin-bottom:5rem;
+            padding: 5rem 3rem;
+            border-radius: 30px;
+            margin-bottom: 5rem;
         }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap:2.5rem;
-            margin-top:3.5rem;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
         }
-        .product-card {
-            background:white;
-            border-radius:16px;
-            overflow:hidden;
-            box-shadow:0 6px 25px rgba(0,0,0,0.08);
-        }
-        .product-image {
-            height:220px;
-            overflow:hidden;
-        }
-        .product-image img { width:100%; height:100%; object-fit:cover; }
-        .product-info { padding:1.75rem; text-align:center; }
-        .product-info h4 { font-size:1.3rem; margin-bottom:0.5rem; }
 
-        .areas-section { padding:5rem 0; }
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.75rem;
+            text-align: center;
+        }
+
+        .product-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .areas-section {
+            padding: 5rem 0;
+        }
+
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-            gap:2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
+
         .area-card {
-            background:white;
-            border-radius:20px;
-            padding:3rem;
-            box-shadow:0 6px 25px rgba(0,0,0,0.08);
-            border-left:6px solid;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid;
         }
-        .pharmacy-page .area-card { border-left-color:var(--pharmacy-green); }
-        .mart-page .area-card { border-left-color:var(--mart-blue); }
-        .area-card h3 { font-size:1.6rem; margin-bottom:2rem; }
-        .area-card ul { list-style:none; }
-        .area-card li { padding:0.5rem 0 0.5rem 2rem; position:relative; }
+
+        .pharmacy-page .area-card {
+            border-left-color: var(--pharmacy-green);
+        }
+
+        .mart-page .area-card {
+            border-left-color: var(--mart-blue);
+        }
+
+        .area-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-card ul {
+            list-style: none;
+        }
+
+        .area-card li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            position: relative;
+        }
+
         .area-card li::before {
-            content:'✓';
-            position:absolute;
-            left:0;
-            font-weight:700;
-            color:inherit;
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: inherit;
         }
-        .pharmacy-page .area-card li::before { color:var(--pharmacy-green); }
-        .mart-page .area-card li::before { color:var(--mart-blue); }
+
+        .pharmacy-page .area-card li::before {
+            color: var(--pharmacy-green);
+        }
+
+        .mart-page .area-card li::before {
+            color: var(--mart-blue);
+        }
 
         /* ========================================
            GALLERY PAGE - ADAPTIVE IMAGE GRID
@@ -631,7 +814,7 @@
             background: white;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -639,7 +822,7 @@
 
         .gallery-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
         }
 
         .gallery-image-container {
@@ -666,67 +849,88 @@
         /* ========================================
            CONTACT PAGE (red call now)
            ======================================== */
-        .contact-wrapper-old { max-width:1200px; margin:0 auto; padding:2rem; }
+        .contact-wrapper-old {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
         .contact-info-old {
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-            gap:2rem;
-            margin-bottom:3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
+
         .contact-item {
-            display:flex;
-            align-items:center;
-            gap:1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
+
         .contact-icon-old {
-            width:50px;
-            height:50px;
-            background:var(--pharmacy-green);
-            color:white;
-            border-radius:50%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:1.5rem;
+            width: 50px;
+            height: 50px;
+            background: var(--pharmacy-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
         }
+
         .opening-hours {
-            background:var(--gray-100);
-            padding:1.5rem;
-            border-radius:12px;
-            margin-top:2rem;
+            background: var(--gray-100);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
         }
+
         .hours-item {
-            display:flex;
-            justify-content:space-between;
-            padding:0.5rem 0;
-            border-bottom:1px dashed #ccc;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ccc;
         }
-        .emergency-hour { color:var(--pharmacy-green); font-weight:600; }
+
+        .emergency-hour {
+            color: var(--pharmacy-green);
+            font-weight: 600;
+        }
+
         .contact-form {
-            background:white;
-            padding:2rem;
-            border-radius:20px;
-            box-shadow:0 5px 20px rgba(0,0,0,0.05);
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
-        .form-group { margin-bottom:1rem; }
-        .form-group input, .form-group textarea {
-            width:100%;
-            padding:0.8rem;
-            border:1px solid #ddd;
-            border-radius:8px;
+
+        .form-group {
+            margin-bottom: 1rem;
         }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
         .submit-btn {
-            background:var(--pharmacy-green);
-            color:white;
-            border:none;
-            padding:1rem 2rem;
-            border-radius:8px;
-            cursor:pointer;
+            background: var(--pharmacy-green);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
         }
+
         .map-container {
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         /* Red Call Now button on contact page */
@@ -742,10 +946,11 @@
             font-weight: 600;
             transition: all 0.2s;
         }
+
         .cta-phone-red:hover {
             background: #cc0000 !important;
             transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(255,0,0,0.3);
+            box-shadow: 0 6px 14px rgba(255, 0, 0, 0.3);
         }
 
         /* Back to home with Font Awesome icon */
@@ -762,7 +967,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 999;
@@ -770,7 +975,12 @@
             opacity: 0;
             pointer-events: none;
         }
-        .back-home-btn.visible { opacity: 1; pointer-events: all; }
+
+        .back-home-btn.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
         .back-home-btn:hover {
             transform: scale(1.1);
             background: var(--pharmacy-green-dark);
@@ -782,26 +992,43 @@
             color: #fff;
             padding: 3rem 0 1rem;
         }
+
         .footer-old .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
         }
+
         .footer-old .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-        .footer-old .footer-section h3 { color: var(--pharmacy-green); margin-bottom: 1rem; }
-        .footer-old .footer-section ul { list-style: none; }
-        .footer-old .footer-section li { margin-bottom: 0.5rem; }
+
+        .footer-old .footer-section h3 {
+            color: var(--pharmacy-green);
+            margin-bottom: 1rem;
+        }
+
+        .footer-old .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-old .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
         .footer-old .footer-section a {
             color: #ddd;
             text-decoration: none;
             cursor: pointer;
         }
-        .footer-old .footer-section a:hover { color: var(--pharmacy-green); }
+
+        .footer-old .footer-section a:hover {
+            color: var(--pharmacy-green);
+        }
+
         .footer-old .footer-bottom {
             text-align: center;
             padding-top: 2rem;
@@ -812,19 +1039,51 @@
            RESPONSIVE (no left/right white space on mobile)
            ======================================== */
         @media (max-width: 1024px) {
-            .hero-wrapper { grid-template-columns: 1fr; }
-            .feature-showcase { grid-template-columns: 1fr; gap: 3rem; }
-            .feature-showcase:nth-child(even) { direction: ltr; }
-            .banner-slider { height: 500px; }
-            .slide-content h2 { font-size: 3.2rem; }
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-showcase {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .feature-showcase:nth-child(even) {
+                direction: ltr;
+            }
+
+            .banner-slider {
+                height: 500px;
+            }
+
+            .slide-content h2 {
+                font-size: 3.2rem;
+            }
         }
 
         @media (max-width: 768px) {
-            .header-container { padding: 0.5rem 1rem; }
-            .logo-img { height: 42px; }
-            .header-right { gap: 0.5rem; }
-            .mobile-toggle { display: flex; }
-            .call-now-header { padding: 0.4rem 1rem; font-size: 0.9rem; }
+            .header-container {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo-img {
+                height: 42px;
+            }
+
+            .header-right {
+                gap: 0.5rem;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .call-now-header {
+                padding: 0.4rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            /* Enhanced Mobile Menu */
             .nav-menu {
                 position: fixed;
                 top: 70px;
@@ -832,76 +1091,205 @@
                 right: 0;
                 background: white;
                 flex-direction: column;
-                padding: 1rem 0;
-                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+                padding: 0;
+                /* Remove padding to be flush */
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
                 transform: translateY(-150%);
                 opacity: 0;
-                transition: all 0.3s;
-                border-radius: 0 0 25px 25px;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                border-radius: 0 0 15px 15px;
                 pointer-events: none;
+                gap: 0;
+                /* Remove gap for seamless list */
+                overflow: hidden;
             }
+
             .nav-menu.active {
                 transform: translateY(0);
                 opacity: 1;
                 pointer-events: all;
             }
-            .nav-link {
-                width: 90%;
-                text-align: center;
-                padding: 0.8rem;
-                border-radius: 40px;
+
+            .nav-menu li {
+                width: 100%;
+                border-bottom: 1px solid #f0f0f0;
             }
-            .hero-wrapper { margin-top: 70px; }
-            .hero-half { padding: 2rem 1.5rem; }
-            .hero-title { font-size: 2.2rem; }
-            .hero-image { height: 200px; }
-            
-            /* Banner slider mobile adjustments - remove side margins for edge-to-edge */
-            .banner-slider { height: 400px; margin-top: 70px; }
+
+            .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: left;
+                padding: 1rem 1.5rem;
+                background: transparent;
+                color: #333;
+                border-radius: 0;
+                /* No pill shape */
+                font-weight: 500;
+                display: flex;
+                /* Use flex to align icon/text if needed */
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-link:hover,
+            .nav-link:active {
+                background: #f9f9f9;
+                color: var(--pharmacy-green);
+            }
+
+            .nav-link.active {
+                background: #f0fdf4;
+                /* Very light green bg */
+                color: var(--pharmacy-green);
+                font-weight: 600;
+                box-shadow: inset 4px 0 0 var(--pharmacy-green);
+                /* Left border indicator */
+            }
+
+            .hero-wrapper {
+                margin-top: 70px;
+            }
+
+            .hero-half {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-image {
+                height: 200px;
+            }
+
+            /* Banner slider mobile adjustments */
+            .banner-slider {
+                height: 450px;
+                margin-top: 70px;
+            }
+
+            /* Increased height slightly for spacing */
             .slide-content {
                 padding: 1.5rem;
                 max-width: 100%;
+                /* Ensure content is centered vertically or pushed up slightly */
+                position: relative;
+                top: -20px;
             }
+
             .slide-content.align-left,
             .slide-content.align-right {
                 margin-left: 0;
                 margin-right: 0;
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
-                text-align: left;
+                text-align: center;
+                /* Center align text for better mobile balance */
+                align-items: center;
+                display: flex;
+                flex-direction: column;
             }
-            .slide-content.align-right {
-                text-align: right;
+
+            .slide-content h2 {
+                font-size: 2rem;
             }
-            .slide-content h2 { font-size: 2rem; }
-            .slide-content p { font-size: 1rem; margin-bottom: 1.5rem; }
-            .slide-button { padding: 0.8rem 1.8rem; font-size: 0.95rem; }
-            .slider-arrow { width: 40px; height: 40px; font-size: 1.3rem; }
-            .slider-arrow.prev { left: 0.5rem; }
-            .slider-arrow.next { right: 0.5rem; }
-            .slide-gradient-overlay { width: 100%; }
-            
-            .page-content { padding: 3rem 1rem; }
-            .section-title { font-size: 2rem; }
-            .feature-image-container { height: 280px; }
-            .feature-info h3 { font-size: 1.8rem; }
+
+            .slide-content p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .slide-button {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.95rem;
+            }
+
+            /* HIDING SLIDER ARROWS ON MOBILE */
+            .slider-arrow {
+                display: none !important;
+            }
+
+            /* Fix Banner Overlap - Move dots down and ensure button clears them */
+            .slider-nav {
+                bottom: 1rem;
+                /* Lower the dots */
+            }
+
+            .slide-gradient-overlay {
+                width: 100%;
+            }
+
+            .page-content {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .feature-image-container {
+                height: 280px;
+            }
+
+            .feature-info h3 {
+                font-size: 1.8rem;
+            }
+
             .services-grid,
             .products-grid,
             .areas-grid,
-            .gallery-grid { grid-template-columns: 1fr; }
-            .area-card { padding: 1.5rem; }
-            .back-home-btn { width: 55px; height: 55px; font-size: 1.5rem; bottom: 1rem; right: 1rem; }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .area-card {
+                padding: 1.5rem;
+            }
+
+            .back-home-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+                bottom: 1rem;
+                right: 1rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .hero-title { font-size: 1.8rem; }
-            .banner-slider { height: 350px; }
-            .slide-content h2 { font-size: 1.6rem; }
-            .slide-content p { font-size: 0.9rem; }
-            .slide-button { padding: 0.7rem 1.5rem; }
-            .feature-image-container { height: 220px; }
-            .call-now-header span { display: none; }
-            .call-now-header i { margin: 0; }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .banner-slider {
+                height: 350px;
+            }
+
+            .slide-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+
+            .slide-button {
+                padding: 0.7rem 1.5rem;
+            }
+
+            .feature-image-container {
+                height: 220px;
+            }
+
+            .call-now-header span {
+                display: none;
+            }
+
+            .call-now-header i {
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -916,7 +1304,8 @@
             </div>
             <div class="header-right">
                 <button class="mobile-toggle" id="mobileToggle">☰</button>
-                <a href="tel:03218202579" class="call-now-header"><i class="fas fa-phone-alt"></i> <span>Call Now</span></a>
+                <a href="tel:03218202579" class="call-now-header"><i class="fas fa-phone-alt"></i> <span>Call
+                        Now</span></a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
                     <li><a href="#" class="nav-link" data-page="pharmacy">Pharmacy</a></li>
@@ -935,10 +1324,12 @@
                 <div class="hero-content">
                     <span class="hero-badge">Healthcare Services</span>
                     <h1 class="hero-title">Hafsa Pharmacy</h1>
-                    <p class="hero-text">Your trusted healthcare partner providing quality medicines, professional consultations, and comprehensive pharmaceutical services across Karachi.</p>
+                    <p class="hero-text">Your trusted healthcare partner providing quality medicines, professional
+                        consultations, and comprehensive pharmaceutical services across Karachi.</p>
                     <a href="#" class="hero-button" data-page="pharmacy">Explore Services →</a>
                     <div class="hero-image">
-                        <img src="https://img.freepik.com/premium-photo/pharmacist-filling-prescription-pharmacy-drugstore_67340-187.jpg" alt="Pharmacy shelves" class="hero-img" loading="lazy">
+                        <img src="https://img.freepik.com/premium-photo/pharmacist-filling-prescription-pharmacy-drugstore_67340-187.jpg"
+                            alt="Pharmacy shelves" class="hero-img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -946,10 +1337,12 @@
                 <div class="hero-content">
                     <span class="hero-badge">Daily Essentials</span>
                     <h1 class="hero-title">Mir Mart</h1>
-                    <p class="hero-text">Your neighborhood convenience store offering fresh groceries, daily essentials, household items, and more with fast home delivery service.</p>
+                    <p class="hero-text">Your neighborhood convenience store offering fresh groceries, daily essentials,
+                        household items, and more with fast home delivery service.</p>
                     <a href="#" class="hero-button" data-page="mart">Browse Products →</a>
                     <div class="hero-image">
-                        <img src="https://img.freepik.com/premium-photo/shopping-cart-filled-with-groceries-supermarket-aisle-surrounded-by-colorful-packaging-shelves-stocked-with-food-products-household-items_1401286-3450.jpg" alt="Grocery basket" class="hero-img" loading="lazy">
+                        <img src="https://img.freepik.com/premium-photo/shopping-cart-filled-with-groceries-supermarket-aisle-surrounded-by-colorful-packaging-shelves-stocked-with-food-products-household-items_1401286-3450.jpg"
+                            alt="Grocery basket" class="hero-img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -960,31 +1353,38 @@
     <div id="pharmacyPage" class="page-section pharmacy-page">
         <div class="banner-slider">
             <div class="slider-container" id="pharmacySlider">
-                <div class="slide pharmacy-slide" style="background-image: url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200');">
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200');">
                     <div class="slide-gradient-overlay left"></div>
                     <div class="slide-content align-left">
                         <span class="slide-badge">Trusted Healthcare</span>
                         <h2>Quality&nbsp;Medicines<br>You Can Trust</h2>
-                        <p>Licensed pharmaceutical care with professional guidance available 24/7 for your health needs</p>
-                        <a href="tel:03218202579" class="slide-button call-now-red"><i class="fas fa-phone-alt"></i> Call Now</a>
+                        <p>Licensed pharmaceutical care with professional guidance available 24/7 for your health needs
+                        </p>
+                        <a href="tel:03218202579" class="slide-button call-now-red"><i class="fas fa-phone-alt"></i>
+                            Call Now</a>
                     </div>
                 </div>
-                <div class="slide pharmacy-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200');">
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200');">
                     <div class="slide-gradient-overlay right"></div>
                     <div class="slide-content align-right">
                         <span class="slide-badge">Fast Delivery</span>
                         <h2>Home&nbsp;Delivery<br>Service</h2>
                         <p>Order your medicines via WhatsApp and get same-day delivery across Karachi</p>
-                        <a href="https://wa.me/923218202579" class="slide-button call-now-red"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                        <a href="https://wa.me/923218202579" class="slide-button call-now-red"><i
+                                class="fab fa-whatsapp"></i> Order on WhatsApp</a>
                     </div>
                 </div>
-                <div class="slide pharmacy-slide" style="background-image: url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=1200');">
+                <div class="slide pharmacy-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=1200');">
                     <div class="slide-gradient-overlay left"></div>
                     <div class="slide-content align-left">
                         <span class="slide-badge">Expert Care</span>
                         <h2>Professional&nbsp;Health<br>Consultation</h2>
                         <p>Free consultation from registered pharmacists for all your health queries and concerns</p>
-                        <a href="#" class="slide-button call-now-red" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact Us</a>
+                        <a href="#" class="slide-button call-now-red" onclick="navigateTo('contact'); return false;"><i
+                                class="fas fa-envelope"></i> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -1006,7 +1406,8 @@
                 </div>
                 <div class="feature-info">
                     <h3>Wide Range of Medicines</h3>
-                    <p>We stock a comprehensive selection of prescription and over-the-counter medications from all major pharmaceutical brands, ensuring you get exactly what you need.</p>
+                    <p>We stock a comprehensive selection of prescription and over-the-counter medications from all
+                        major pharmaceutical brands, ensuring you get exactly what you need.</p>
                     <ul class="feature-list">
                         <li>Branded & Generic Medicines</li>
                         <li>Verified by Licensed Pharmacists</li>
@@ -1020,12 +1421,14 @@
             <!-- Feature 2 -->
             <div class="feature-showcase">
                 <div class="feature-image-container">
-                    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800" alt="Pharmacist Consultation">
+                    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800"
+                        alt="Pharmacist Consultation">
                     <div class="feature-overlay">Expert Pharmacist Consultation</div>
                 </div>
                 <div class="feature-info">
                     <h3>Professional Healthcare Services</h3>
-                    <p>Our registered pharmacists are always available to provide expert guidance on medications, health conditions, and wellness advice.</p>
+                    <p>Our registered pharmacists are always available to provide expert guidance on medications, health
+                        conditions, and wellness advice.</p>
                     <ul class="feature-list">
                         <li>Free Health Consultation</li>
                         <li>Medication Review & Advice</li>
@@ -1042,16 +1445,32 @@
                 <p class="section-subtitle">Comprehensive pharmaceutical care tailored to your health needs</p>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-image"><img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=600" alt="Home Delivery"></div>
-                        <div class="service-content"><h3>Home Delivery</h3><p>Fast and reliable medicine delivery across all areas of Karachi with careful packaging.</p></div>
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=600"
+                                alt="Home Delivery"></div>
+                        <div class="service-content">
+                            <h3>Home Delivery</h3>
+                            <p>Fast and reliable medicine delivery across all areas of Karachi with careful packaging.
+                            </p>
+                        </div>
                     </div>
                     <div class="service-card">
-                        <div class="service-image"><img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600" alt="Lab Tests"></div>
-                        <div class="service-content"><h3>Lab Tests</h3><p>Convenient sample collection for various laboratory tests with accurate results.</p></div>
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600"
+                                alt="Lab Tests"></div>
+                        <div class="service-content">
+                            <h3>Lab Tests</h3>
+                            <p>Convenient sample collection for various laboratory tests with accurate results.</p>
+                        </div>
                     </div>
                     <div class="service-card">
-                        <div class="service-image"><img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600" alt="Vaccinations"></div>
-                        <div class="service-content"><h3>Vaccinations</h3><p>Complete immunization services including COVID-19, flu, and other essential vaccines.</p></div>
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600"
+                                alt="Vaccinations"></div>
+                        <div class="service-content">
+                            <h3>Vaccinations</h3>
+                            <p>Complete immunization services including COVID-19, flu, and other essential vaccines.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1061,33 +1480,78 @@
                 <h2 class="section-title">Product Categories</h2>
                 <p class="section-subtitle">Everything you need for your health and wellness</p>
                 <div class="products-grid">
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400" alt="Prescription Medicines"></div><div class="product-info"><h4>Prescription Medicines</h4><p>All major brands and generic options</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://img.freepik.com/free-photo/top-view-medical-pills_23-2149283859.jpg?w=400" alt="OTC Products"></div><div class="product-info"><h4>OTC Products</h4><p>Pain relief, vitamins, supplements</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400" alt="Baby Care"></div><div class="product-info"><h4>Baby Care</h4><p>Formula, diapers, baby medications</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400" alt="Personal Care"></div><div class="product-info"><h4>Personal Care</h4><p>Skincare and hygiene products</p></div></div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400"
+                                alt="Prescription Medicines"></div>
+                        <div class="product-info">
+                            <h4>Prescription Medicines</h4>
+                            <p>All major brands and generic options</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://img.freepik.com/free-photo/top-view-medical-pills_23-2149283859.jpg?w=400"
+                                alt="OTC Products"></div>
+                        <div class="product-info">
+                            <h4>OTC Products</h4>
+                            <p>Pain relief, vitamins, supplements</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400"
+                                alt="Baby Care"></div>
+                        <div class="product-info">
+                            <h4>Baby Care</h4>
+                            <p>Formula, diapers, baby medications</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400"
+                                alt="Personal Care"></div>
+                        <div class="product-info">
+                            <h4>Personal Care</h4>
+                            <p>Skincare and hygiene products</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Areas Section -->
             <section class="areas-section">
                 <h2 class="section-title">Areas We Serve in Karachi</h2>
-                <p class="section-subtitle">We deliver in neighborhoods ensuring convenient access to quality healthcare products wherever you are.</p>
+                <p class="section-subtitle">We deliver in neighborhoods ensuring convenient access to quality healthcare
+                    products wherever you are.</p>
                 <div class="areas-grid">
                     <div class="area-card">
                         <h3><i class="fas fa-map-marker-alt"></i> Buffer Zone</h3>
-                        <ul><li>Complete coverage in all sectors</li><li>Fast delivery</li></ul>
+                        <ul>
+                            <li>Complete coverage in all sectors</li>
+                            <li>Fast delivery</li>
+                        </ul>
                     </div>
                     <div class="area-card">
                         <h3><i class="fas fa-map-marker-alt"></i> North Nazimabad</h3>
-                        <ul><li>All blocks and sectors covered</li><li>Free home delivery</li></ul>
+                        <ul>
+                            <li>All blocks and sectors covered</li>
+                            <li>Free home delivery</li>
+                        </ul>
                     </div>
                     <div class="area-card">
                         <h3><i class="fas fa-map-marker-alt"></i> Shadman Town</h3>
-                        <ul><li>Full delivery services available</li><li>24/7 service</li></ul>
+                        <ul>
+                            <li>Full delivery services available</li>
+                            <li>24/7 service</li>
+                        </ul>
                     </div>
                     <div class="area-card">
                         <h3><i class="fas fa-map-marker-alt"></i> New Karachi</h3>
-                        <ul><li>All sectors and industrial area covered</li><li>Same-day delivery</li></ul>
+                        <ul>
+                            <li>All sectors and industrial area covered</li>
+                            <li>Same-day delivery</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -1098,31 +1562,37 @@
     <div id="martPage" class="page-section mart-page">
         <div class="banner-slider">
             <div class="slider-container" id="martSlider">
-                <div class="slide mart-slide" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200');">
+                <div class="slide mart-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200');">
                     <div class="slide-gradient-overlay left"></div>
                     <div class="slide-content align-left">
                         <span class="slide-badge">Fresh & Quality</span>
                         <h2>Fresh&nbsp;Groceries<br>Daily</h2>
                         <p>Quality products at the best prices with same-day delivery across Karachi</p>
-                        <a href="tel:03218202579" class="slide-button call-now-red"><i class="fas fa-phone-alt"></i> Call Now</a>
+                        <a href="tel:03218202579" class="slide-button call-now-red"><i class="fas fa-phone-alt"></i>
+                            Call Now</a>
                     </div>
                 </div>
-                <div class="slide mart-slide" style="background-image: url('https://img.freepik.com/premium-photo/store-with-sign-that-says-super-super-it_1022212-19920.jpg?w=1200');">
+                <div class="slide mart-slide"
+                    style="background-image: url('https://img.freepik.com/premium-photo/store-with-sign-that-says-super-super-it_1022212-19920.jpg?w=1200');">
                     <div class="slide-gradient-overlay right"></div>
                     <div class="slide-content align-right">
                         <span class="slide-badge">Quick Service</span>
                         <h2>Same-Day<br>Home&nbsp;Delivery</h2>
                         <p>Order by 2 PM and receive your groceries at your doorstep the same day</p>
-                        <a href="https://wa.me/923218202579" class="slide-button call-now-red"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                        <a href="https://wa.me/923218202579" class="slide-button call-now-red"><i
+                                class="fab fa-whatsapp"></i> Order on WhatsApp</a>
                     </div>
                 </div>
-                <div class="slide mart-slide" style="background-image: url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=1200');">
+                <div class="slide mart-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=1200');">
                     <div class="slide-gradient-overlay left"></div>
                     <div class="slide-content align-left">
                         <span class="slide-badge">Best Value</span>
                         <h2>Best&nbsp;Prices<br>Guaranteed</h2>
                         <p>Competitive pricing on all products with special deals and discounts every week</p>
-                        <a href="#" class="slide-button call-now-red" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact Us</a>
+                        <a href="#" class="slide-button call-now-red" onclick="navigateTo('contact'); return false;"><i
+                                class="fas fa-envelope"></i> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -1143,7 +1613,8 @@
                 </div>
                 <div class="feature-info">
                     <h3>Fresh Groceries & Essentials</h3>
-                    <p>We provide fresh, quality groceries and daily essentials delivered straight to your door. All products are sourced from trusted suppliers.</p>
+                    <p>We provide fresh, quality groceries and daily essentials delivered straight to your door. All
+                        products are sourced from trusted suppliers.</p>
                     <ul class="feature-list">
                         <li>Fresh Vegetables & Fruits</li>
                         <li>Rice, Flour & Staple Foods</li>
@@ -1156,12 +1627,14 @@
             <!-- Feature 2 -->
             <div class="feature-showcase">
                 <div class="feature-image-container">
-                    <img src="https://images.unsplash.com/photo-1628102491629-778571d893a3?w=800" alt="Household Products">
+                    <img src="https://images.unsplash.com/photo-1628102491629-778571d893a3?w=800"
+                        alt="Household Products">
                     <div class="feature-overlay">Complete Household Range</div>
                 </div>
                 <div class="feature-info">
                     <h3>Complete Household Solutions</h3>
-                    <p>From cleaning products to personal care items, we have everything you need for your home under one roof.</p>
+                    <p>From cleaning products to personal care items, we have everything you need for your home under
+                        one roof.</p>
                     <ul class="feature-list">
                         <li>Cleaning & Laundry Products</li>
                         <li>Personal Care & Hygiene</li>
@@ -1177,9 +1650,33 @@
                 <h2 class="section-title">Why Shop With Us</h2>
                 <p class="section-subtitle">Convenience, quality, and reliability in every order</p>
                 <div class="services-grid">
-                    <div class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600" alt="Delivery Van"></div><div class="service-content"><h3>Same-Day Delivery</h3><p>Order by 2 PM and receive your groceries the same day across Karachi.</p></div></div>
-                    <div class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600" alt="Best Prices"></div><div class="service-content"><h3>Best Prices</h3><p>Competitive pricing on all products with regular deals and discounts.</p></div></div>
-                    <div class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Quality Check"></div><div class="service-content"><h3>Quality Assured</h3><p>All products sourced from authorized distributors with quality checks.</p></div></div>
+                    <div class="service-card">
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600"
+                                alt="Delivery Van"></div>
+                        <div class="service-content">
+                            <h3>Same-Day Delivery</h3>
+                            <p>Order by 2 PM and receive your groceries the same day across Karachi.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600"
+                                alt="Best Prices"></div>
+                        <div class="service-content">
+                            <h3>Best Prices</h3>
+                            <p>Competitive pricing on all products with regular deals and discounts.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image"><img
+                                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"
+                                alt="Quality Check"></div>
+                        <div class="service-content">
+                            <h3>Quality Assured</h3>
+                            <p>All products sourced from authorized distributors with quality checks.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1188,22 +1685,75 @@
                 <h2 class="section-title">Product Categories</h2>
                 <p class="section-subtitle">Everything you need for your daily life</p>
                 <div class="products-grid">
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400" alt="Groceries"></div><div class="product-info"><h4>Groceries & Staples</h4><p>Rice, flour, sugar, oil, pulses</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=400" alt="Beverages"></div><div class="product-info"><h4>Beverages</h4><p>Juices, soft drinks, tea, coffee</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400" alt="Snacks"></div><div class="product-info"><h4>Snacks</h4><p>Biscuits, chips, chocolates</p></div></div>
-                    <div class="product-card"><div class="product-image"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400" alt="Personal Care"></div><div class="product-info"><h4>Personal Care</h4><p>Soap, shampoo, hygiene items</p></div></div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400"
+                                alt="Groceries"></div>
+                        <div class="product-info">
+                            <h4>Groceries & Staples</h4>
+                            <p>Rice, flour, sugar, oil, pulses</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1648156253473-1154aac22425?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEJldmVyYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
+                                alt="Beverages"></div>
+                        <div class="product-info">
+                            <h4>Beverages</h4>
+                            <p>Juices, soft drinks, tea, coffee</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400" alt="Snacks">
+                        </div>
+                        <div class="product-info">
+                            <h4>Snacks</h4>
+                            <p>Biscuits, chips, chocolates</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"><img
+                                src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400"
+                                alt="Personal Care"></div>
+                        <div class="product-info">
+                            <h4>Personal Care</h4>
+                            <p>Soap, shampoo, hygiene items</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Areas Section -->
             <section class="areas-section">
                 <h2 class="section-title">Areas We Serve in Karachi</h2>
-                <p class="section-subtitle">We deliver in neighborhoods ensuring convenient access to quality healthcare products wherever you are.</p>
+                <p class="section-subtitle">We deliver in neighborhoods ensuring convenient access to quality healthcare
+                    products wherever you are.</p>
                 <div class="areas-grid">
-                    <div class="area-card"><h3><i class="fas fa-map-marker-alt"></i> Buffer Zone</h3><ul><li>Complete coverage in all sectors</li></ul></div>
-                    <div class="area-card"><h3><i class="fas fa-map-marker-alt"></i> North Nazimabad</h3><ul><li>All blocks and sectors covered</li></ul></div>
-                    <div class="area-card"><h3><i class="fas fa-map-marker-alt"></i> Shadman Town</h3><ul><li>Full delivery services available</li></ul></div>
-                    <div class="area-card"><h3><i class="fas fa-map-marker-alt"></i> New Karachi</h3><ul><li>All sectors and industrial area covered</li></ul></div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Buffer Zone</h3>
+                        <ul>
+                            <li>Complete coverage in all sectors</li>
+                        </ul>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> North Nazimabad</h3>
+                        <ul>
+                            <li>All blocks and sectors covered</li>
+                        </ul>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Shadman Town</h3>
+                        <ul>
+                            <li>Full delivery services available</li>
+                        </ul>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> New Karachi</h3>
+                        <ul>
+                            <li>All sectors and industrial area covered</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
@@ -1272,7 +1822,8 @@
                 <div class="section-title">Our Location</div>
                 <p style="text-align:center; margin-bottom:2rem;">Find us easily on Google Maps</p>
                 <div class="map-container">
-                    <iframe src="https://maps.google.com/maps?q=24.961459094250866,67.0666598538706&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=24.961459094250866,67.0666598538706&z=16&output=embed"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -1286,15 +1837,22 @@
                     <div class="contact-info-old">
                         <div class="contact-item">
                             <div class="contact-icon-old"><i class="fas fa-phone"></i></div>
-                            <div><h3>Phone Number</h3><a href="tel:03218202579">0321-8202579</a></div>
+                            <div>
+                                <h3>Phone Number</h3><a href="tel:03218202579">0321-8202579</a>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon-old"><i class="fas fa-map-marker-alt"></i></div>
-                            <div><h3>Location</h3><p>Bufferzone, North Nazimabad, Karachi</p></div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Bufferzone, North Nazimabad, Karachi</p>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon-old"><i class="fas fa-globe"></i></div>
-                            <div><h3>Website</h3><a href="http://www.hafsaph.com" target="_blank">www.hafsaph.com</a></div>
+                            <div>
+                                <h3>Website</h3><a href="http://www.hafsaph.com" target="_blank">www.hafsaph.com</a>
+                            </div>
                         </div>
                     </div>
 
@@ -1302,11 +1860,14 @@
                         <h3><i class="fas fa-clock"></i> Opening Hours</h3>
                         <div class="hours-item"><span>Monday - Saturday</span><span>12 pm to 2 am</span></div>
                         <div class="hours-item"><span>Friday</span><span>2 pm to 2 am</span></div>
-                        <div class="hours-item emergency-hour"><span>Emergency Service</span><span>24/7 Available</span></div>
+                        <div class="hours-item emergency-hour"><span>Emergency Service</span><span>24/7 Available</span>
+                        </div>
                     </div>
 
                     <div style="display:flex; gap:1rem; margin:2rem 0; flex-wrap:wrap;">
-                        <a href="https://wa.me/923218202579" class="cta-btn cta-whatsapp" style="background:#25D366; color:white; padding:1rem 2rem; border-radius:40px; text-decoration:none;"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                        <a href="https://wa.me/923218202579" class="cta-btn cta-whatsapp"
+                            style="background:#25D366; color:white; padding:1rem 2rem; border-radius:40px; text-decoration:none;"><i
+                                class="fab fa-whatsapp"></i> WhatsApp Us</a>
                         <!-- Red Call Now button -->
                         <a href="tel:03218202579" class="cta-phone-red"><i class="fas fa-phone-alt"></i> Call Now</a>
                     </div>
@@ -1316,8 +1877,10 @@
                         <form id="contactForm">
                             <div class="form-group"><input type="text" placeholder="Your Name" required></div>
                             <div class="form-group"><input type="tel" placeholder="Phone Number" required></div>
-                            <div class="form-group"><textarea placeholder="Your Message" rows="5" required></textarea></div>
-                            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                            <div class="form-group"><textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send
+                                Message</button>
                         </form>
                     </div>
                 </div>
@@ -1334,7 +1897,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Hafsa Pharmacy & Mir Mart</h3>
-                    <p>Your trusted 24-hour pharmacy in Karachi providing quality healthcare products and professional services.</p>
+                    <p>Your trusted 24-hour pharmacy in Karachi providing quality healthcare products and professional
+                        services.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -1377,7 +1941,7 @@
         const navMenu = document.getElementById('navMenu');
 
         function navigateTo(pageName) {
-            Object.values(pages).forEach(p => { if(p) p.classList.remove('active'); });
+            Object.values(pages).forEach(p => { if (p) p.classList.remove('active'); });
             if (pages[pageName]) pages[pageName].classList.add('active');
 
             navLinks.forEach(link => {
