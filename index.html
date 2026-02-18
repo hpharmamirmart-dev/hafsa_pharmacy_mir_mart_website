@@ -55,6 +55,11 @@
             overflow-x: hidden;
         }
 
+        img, video, iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
         /* ========================================
            HEADER - SIMPLIFIED & NON-OVERLAPPING
            ======================================== */
@@ -169,6 +174,7 @@
            ======================================== */
         .page-section {
             display: none;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         .page-section.active {
@@ -1094,7 +1100,6 @@
                 background: white;
                 flex-direction: column;
                 padding: 0;
-                /* Remove padding to be flush */
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
                 transform: translateY(-150%);
                 opacity: 0;
@@ -1102,7 +1107,6 @@
                 border-radius: 0 0 15px 15px;
                 pointer-events: none;
                 gap: 0;
-                /* Remove gap for seamless list */
                 overflow: hidden;
             }
 
@@ -1128,10 +1132,8 @@
                 background: transparent;
                 color: #333;
                 border-radius: 0;
-                /* No pill shape */
                 font-weight: 500;
                 display: flex;
-                /* Use flex to align icon/text if needed */
                 justify-content: space-between;
                 align-items: center;
             }
@@ -1144,11 +1146,9 @@
 
             .nav-link.active {
                 background: #f0fdf4;
-                /* Very light green bg */
                 color: var(--pharmacy-green);
                 font-weight: 600;
                 box-shadow: inset 4px 0 0 var(--pharmacy-green);
-                /* Left border indicator */
             }
 
             .hero-wrapper {
@@ -1173,11 +1173,9 @@
                 margin-top: 70px;
             }
 
-            /* Increased height slightly for spacing */
             .slide-content {
                 padding: 1.5rem;
                 max-width: 100%;
-                /* Ensure content is centered vertically or pushed up slightly */
                 position: relative;
                 top: -20px;
             }
@@ -1189,7 +1187,6 @@
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
                 text-align: center;
-                /* Center align text for better mobile balance */
                 align-items: center;
                 display: flex;
                 flex-direction: column;
@@ -1217,7 +1214,6 @@
             /* Fix Banner Overlap - Move dots down and ensure button clears them */
             .slider-nav {
                 bottom: 1rem;
-                /* Lower the dots */
             }
 
             .slide-gradient-overlay {
@@ -1257,6 +1253,11 @@
                 font-size: 1.5rem;
                 bottom: 1rem;
                 right: 1rem;
+            }
+
+            /* Adjust products showcase padding on mobile */
+            .products-showcase {
+                padding: 3rem 1rem;
             }
         }
 
@@ -1441,7 +1442,7 @@
                 </div>
             </div>
 
-            <!-- Services Section -->
+            <!-- Services Section (Updated: removed Lab Tests & Vaccinations, added two new services) -->
             <section class="services-section">
                 <h2 class="section-title">Our Complete Services</h2>
                 <p class="section-subtitle">Comprehensive pharmaceutical care tailored to your health needs</p>
@@ -1456,22 +1457,24 @@
                             </p>
                         </div>
                     </div>
+                    <!-- New Service: Health Consultations -->
                     <div class="service-card">
                         <div class="service-image"><img
-                                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600"
-                                alt="Lab Tests"></div>
+                                src="https://img.freepik.com/free-photo/doctor-doing-their-work-pediatrics-office_23-2149224139.jpg?uid=R49441938&ga=GA1.1.1791443031.1690348607&semt=ais_hybrid&w=740&q=80"
+                                alt="Health Consultations"></div>
                         <div class="service-content">
-                            <h3>Lab Tests</h3>
-                            <p>Convenient sample collection for various laboratory tests with accurate results.</p>
+                            <h3>Health Consultations</h3>
+                            <p>Professional advice from registered pharmacists for all your health concerns and medication management.</p>
                         </div>
                     </div>
+                    <!-- New Service: Medical Equipment -->
                     <div class="service-card">
                         <div class="service-image"><img
-                                src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600"
-                                alt="Vaccinations"></div>
+                                src="https://img.freepik.com/free-photo/beautiful-woman-family-doctor-measures-blood-pressure-with-tonometer_496169-1490.jpg?t=st=1771375849~exp=1771379449~hmac=cca257461b3e6098aafbef531c76221870efb0cfd4bc1252191324fae558efd8&w=1060"
+                                alt="Medical Equipment"></div>
                         <div class="service-content">
-                            <h3>Vaccinations</h3>
-                            <p>Complete immunization services including COVID-19, flu, and other essential vaccines.</p>
+                            <h3>Medical Equipment</h3>
+                            <p>Quality medical devices including BP monitors, glucometers, nebulizers, and more for home care.</p>
                         </div>
                     </div>
                 </div>
